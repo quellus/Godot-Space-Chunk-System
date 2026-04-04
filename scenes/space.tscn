@@ -2,11 +2,26 @@
 
 [ext_resource type="Script" uid="uid://da1dnkf20tinv" path="res://scripts/space.gd" id="1_dtwn4"]
 [ext_resource type="PackedScene" uid="uid://dxtenddefygd3" path="res://scenes/space_chunk.tscn" id="1_rysn1"]
-[ext_resource type="PackedScene" uid="uid://cl5gejp3whfpg" path="res://scenes/player.tscn" id="2_c6rj5"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_dtwn4"]
 
 [node name="Space" type="Node3D" unique_id=79901660]
 script = ExtResource("1_dtwn4")
+space_chunk_scene = ExtResource("1_rysn1")
+chunk_radius = null
 
-[node name="SpaceChunk" parent="." unique_id=2043521316 instance=ExtResource("1_rysn1")]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1276574690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.192349, 0, 0)
+mesh = SubResource("SphereMesh_dtwn4")
 
-[node name="Player" parent="." unique_id=1998371338 instance=ExtResource("2_c6rj5")]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=554691334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07184696, 0, -25.794714)
+mesh = SubResource("SphereMesh_dtwn4")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=344717105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.773096, 0, 0.009290695)
+mesh = SubResource("SphereMesh_dtwn4")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1901659598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.027195454, 0, 10.324951)
+mesh = SubResource("SphereMesh_dtwn4")

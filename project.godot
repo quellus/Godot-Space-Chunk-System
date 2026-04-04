@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Godot Space Chunk System"
-run/main_scene="uid://dc48r3o2a3h3n"
+run/main_scene="uid://ddohm3bjb87bd"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.svg"
 
