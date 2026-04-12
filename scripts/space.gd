@@ -53,9 +53,10 @@ func _process(_delta: float) -> void:
 
 func _add_chunks_to_gen_queue():
 	chunk_generate_queue.clear()
-	for x in range(-chunk_radius, chunk_radius):
-		for y in range(-chunk_radius, chunk_radius):
-			for z in range(-chunk_radius, chunk_radius):
+	for x in range(-chunk_radius, chunk_radius + 1):
+		#print_debug(x)
+		for y in range(-chunk_radius, chunk_radius + 1):
+			for z in range(-chunk_radius, chunk_radius + 1):
 				var chunk_coord: Vector3i = Vector3i(x,y,z) + focus_chunk_coord
 				if chunk_coord not in active_chunks or not is_instance_valid(active_chunks[chunk_coord]):
 					chunk_generate_queue.append(chunk_coord)
