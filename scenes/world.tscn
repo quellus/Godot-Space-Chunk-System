@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddohm3bjb87bd"]
 
-[ext_resource type="PackedScene" uid="uid://dc48r3o2a3h3n" path="res://scenes/space.tscn" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://ej76omctqltq" path="res://addons/godot-space-chunk-addon/space.tscn" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://cl5gejp3whfpg" path="res://scenes/player.tscn" id="2_rwgxs"]
 
 [sub_resource type="Environment" id="Environment_4wyf3"]
@@ -10,7 +10,7 @@ ambient_light_color = Color(0.70980394, 0.70980394, 0.56078434, 1)
 
 [node name="World" type="Node3D" unique_id=1913864307]
 
-[node name="Space" parent="." unique_id=79901660 node_paths=PackedStringArray("focus") instance=ExtResource("1_nnsk1")]
+[node name="Space" parent="." unique_id=79901660 node_paths=PackedStringArray("focus") instance=ExtResource("1_rwgxs")]
 focus = NodePath("../Player")
 
 [node name="Player" parent="." unique_id=1998371338 instance=ExtResource("2_rwgxs")]
